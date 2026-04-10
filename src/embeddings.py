@@ -5,6 +5,7 @@ import math
 
 LOCAL_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
+GEMINI_EMBEDDING_MODEL = "models/gemini-embedding-001"
 EMBEDDING_PROVIDER_ENV = "EMBEDDING_PROVIDER"
 
 
@@ -58,4 +59,29 @@ class OpenAIEmbedder:
         return [float(value) for value in response.data[0].embedding]
 
 
+class GeminiEmbedder:
+    """Google Gemini API-backed embedder."""
+
+    def __init__(self, model_name: str = GEMINI_EMBEDDING_MODEL) -> None:
+        import os
+        import google.generativeai as genai
+
+        self.model_name = model_name
+        self._backend_name = model_name
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if api_key:
+            genai.configure(api_key=api_key)
+
+    def __call__(self, text: str | list[str]) -> list[float] | list[list[float]]:
+        import google.generativeai as genai
+        
+        result = genai.embed_content(
+            model=self.model_name,
+            content=text,
+            task_type="retrieval_document"
+        )
+        return result['embedding']
+
+
 _mock_embed = MockEmbedder()
+_gemini_embed = GeminiEmbedder()
