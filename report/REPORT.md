@@ -11,7 +11,7 @@
 ### Cosine Similarity (Ex 1.1)
 
 **High cosine similarity nghĩa là gì?**
-> *high cosine similarity nghĩa là hai vector có cùng hướng, tức là hai câu có cùng ý nghĩa, ví dụ nếu cosine similarity bằng 1 thì hai câu hoàn toàn giống nhau, nếu bằng 0 thì hai câu hoàn toàn khác nhau, nếu bằng -1 thì hai câu hoàn toàn khác nhau*
+> *high cosine similarity nghĩa là hai vector có cùng hướng, tức là hai câu có cùng ý nghĩa, ví dụ nếu cosine similarity bằng 1 thì hai câu hoàn toàn giống nhau, nếu bằng 0 thì hai câu hoàn toàn khác nhau, nếu bằng 0 thì hai câu hoàn toàn khác nhau*
 **Ví dụ HIGH similarity:**
 - Sentence A:chó là bạn 
 - Sentence B:tôi yêu chó 
