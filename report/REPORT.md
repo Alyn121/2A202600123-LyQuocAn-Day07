@@ -222,7 +222,6 @@ src\embeddings.py:67
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================================== 42 passed, 4 warnings in 3.36s ============================================
 ```
-
 **Số tests pass:** 42 / 42
 
 ---
