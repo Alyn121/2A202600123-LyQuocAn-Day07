@@ -59,9 +59,10 @@
 ### Metadata Schema
 
 | Trường metadata | Kiểu | Ví dụ giá trị | Tại sao hữu ích cho retrieval? |
-|----------------|------|---------------|-------------------------------|| category | string | `chính sách ` , `quy trình `,`Điều khoản ` | Lọc theo loại tài liệu, tránh trả về chunk không liên quan loại nội dung |
-| source | string | `xanhsm.com` | Truy vết nguồn gốc tài liệu, hỗ trợ citation và kiểm tra độ tin cậy |
-| audience | string | `tài xế`, `khách hàng ` | Lọc theo đối tượng người dùng, trả về nội dung phù hợp với từng nhóm |
+|----------------|------|---------------|-------------------------------|
+| category | string | `chính sách`, `quy trình`, `Điều khoản` | Lọc theo loại tài liệu, tránh trả về chunk không liên quan loại nội dung. |
+| source | string | `xanhsm.com` | Truy vết nguồn gốc tài liệu, hỗ trợ citation và kiểm tra độ tin cậy. |
+| audience | string | `tài xế`, `khách hàng` | Lọc theo đối tượng người dùng, trả về nội dung phù hợp với từng nhóm. |
 
 ## 3. Chunking Strategy — Cá nhân chọn, nhóm so sánh (15 điểm)
 
